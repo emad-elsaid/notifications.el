@@ -1,0 +1,50 @@
+#+TITLE: notifications layer
+
+# TOC links should be GitHub style anchors.
+* Table of Contents                                        :TOC_4_gh:noexport:
+- [[#description][Description]]
+- [[#install][Install]]
+- [[#variables][Variables]]
+
+* Description
+A notifications panel for Emacs, that works with org mode and evil mode
+
+This package offers a simple way to handle notifications in Emacs,
+notifications could be a new email, a bookmark from a file with a to do
+message, someone sent a message to you on a messaging application
+
+The idea is to open a side bar, that shows an Org file, every list item is a
+notification, and archiving the item is equivalent to marking the
+notifications ar read.
+
+using Org mode as a format takes advantage of the Org mode linking, as you
+can link to a file or a URL or a remote file, and even sub notifications, if
+you wish as a sub-list
+
+The package defines a minor mode that adds some other small keybinding for
+Evil mode such as 'q' to close the panel or 'r' to mark current highlighted
+notification as read and archive it.
+
+So simply it's an Org file opened in a window to the side waiting for the
+file to be changed to reload, you can write any comandline tool that works in
+the background and appends to that file, this is how you push a new
+notification, it's as simple as that
+so a command line "echo "* new notification >> ~/path/to/notificatins.org"
+will push a new notification to your Emacs notifications side bar, and as
+the panel has `auto-revert-mode' it'll display it automatically
+
+#+BEGIN_SRC lang:elisp
+(setq notifications-file "~/path/to/your/notification.org")
+#+END_SRC
+
+* Install
+To use this configuration layer, add it to your =~/.spacemacs=. You will need to
+add =notifications= to the existing =dotspacemacs-configuration-layers= list in this
+file.
+
+* Variables
+
+| variable                    | Description                  |
+|-----------------------------+------------------------------|
+| ~notifications-file~        | the notifications file path  |
+| ~notifications-panel-width~ | the sidebar width characters |
