@@ -8,7 +8,7 @@
 - [[#notification-panel-keybindings][Notification Panel Keybindings]]
 
 * Description
-A notifications panel for Emacs, that works with org mode and evil mode
+A notifications layer for Spacemacs, that works with org mode and evil mode
 
 This package offers a simple way to handle notifications in Emacs,
 notifications could be a new email, a bookmark from a file with a to do
