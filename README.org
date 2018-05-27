@@ -5,6 +5,7 @@
 - [[#description][Description]]
 - [[#install][Install]]
 - [[#variables][Variables]]
+- [[#notification-panel-keybindings][Notification Panel Keybindings]]
 
 * Description
 A notifications panel for Emacs, that works with org mode and evil mode
@@ -48,3 +49,10 @@ file.
 |-----------------------------+------------------------------|
 | ~notifications-file~        | the notifications file path  |
 | ~notifications-panel-width~ | the sidebar width characters |
+
+* Notification Panel Keybindings
+
+| Keybinding | Function                                     |
+|------------+----------------------------------------------|
+| ~r~        | Mark the notification as read and archive it |
+| ~q~        | Close the notificatins panel                 |
