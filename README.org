@@ -5,6 +5,7 @@
 - [[#description][Description]]
 - [[#install][Install]]
 - [[#variables][Variables]]
+- [[#keybindings][Keybindings]]
 - [[#notification-panel-keybindings][Notification Panel Keybindings]]
 
 * Description
@@ -49,6 +50,12 @@ file.
 |-----------------------------+------------------------------|
 | ~notifications-file~        | the notifications file path  |
 | ~notifications-panel-width~ | the sidebar width characters |
+
+* Keybindings
+
+| Key         | function                 |
+|-------------+--------------------------|
+| ~SPC a n n~ | Open notifications panel |
 
 * Notification Panel Keybindings
 
