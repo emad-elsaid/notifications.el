@@ -31,13 +31,9 @@ So simply it's an Org file opened in a window to the side waiting for the
 file to be changed to reload, you can write any comandline tool that works in
 the background and appends to that file, this is how you push a new
 notification, it's as simple as that
-so a command line "echo "* new notification >> ~/path/to/notificatins.org"
+so a command line `echo "* new notification" >> ~/path/to/notificatins.org`
 will push a new notification to your Emacs notifications side bar, and as
 the panel has `auto-revert-mode' it'll display it automatically
-
-#+BEGIN_SRC lang:elisp
-(setq notifications-file "~/path/to/your/notification.org")
-#+END_SRC
 
 * Install
 To use this configuration layer, add it to your =~/.spacemacs=. You will need to
