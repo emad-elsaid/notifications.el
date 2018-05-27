@@ -49,9 +49,10 @@ file.
 
 * Keybindings
 
-| Key         | function                 |
-|-------------+--------------------------|
-| ~SPC a n n~ | Open notifications panel |
+| Key         | function                                               |
+|-------------+--------------------------------------------------------|
+| ~SPC a n n~ | Open notifications panel                               |
+| ~SPC a n b~ | Create a bookmark linking to the current file and line |
 
 * Notification Panel Keybindings
 

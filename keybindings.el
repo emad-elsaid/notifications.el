@@ -4,3 +4,4 @@
 
 (spacemacs/declare-prefix "an" "Notifications")
 (spacemacs/set-leader-keys "ann" 'notifications-open)
+(spacemacs/set-leader-keys "anb" 'notifications-create-bookmark)
