@@ -25,11 +25,6 @@
   (save-buffer)
   (read-only-mode t))
 
-(defun notifications-buffer ()
-  "returns the buffer linked to the notifications file if it exists,
-nil if it doesn't"
-  (find-buffer-visiting notifications-file))
-
 (defun notifications-create-bookmark (arg title)
   (interactive "P\nsBookmark title: ")
 
@@ -43,6 +38,13 @@ nil if it doesn't"
            "]]\n")
    nil
    notifications-file 'append))
+
+(defun notifications-create-todo (arg title description)
+  (interactive "P\nsTitle: \nsDescription: ")
+
+  (write-region
+   (concat "* " title "\n" description)
+   nil notifications-file 'append))
 
 (defun notifications-panel-create ()
   "Create the notifications panel"
@@ -61,3 +63,8 @@ nil if it doesn't"
   "Switch to the notification panel"
 
   (select-window (get-buffer-window (notifications-buffer))))
+
+(defun notifications-buffer ()
+  "returns the buffer linked to the notifications file if it exists,
+nil if it doesn't"
+  (find-buffer-visiting notifications-file))
