@@ -6,7 +6,7 @@
   "Open the notifications panel"
   (interactive)
 
-  (if (notifications-buffer)
+  (if (and (notifications-buffer) (notifications-buffer-window))
       (notifications-panel-switch)
     (notifications-panel-create)))
 
@@ -62,9 +62,14 @@
 (defun notifications-panel-switch ()
   "Switch to the notification panel"
 
-  (select-window (get-buffer-window (notifications-buffer))))
+  (select-window (notifications-buffer-window)))
 
 (defun notifications-buffer ()
   "returns the buffer linked to the notifications file if it exists,
 nil if it doesn't"
   (find-buffer-visiting notifications-file))
+
+(defun notifications-buffer-window ()
+  "Return the window that show the notifications buffer"
+
+  (get-buffer-window (notifications-buffer)))
