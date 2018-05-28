@@ -53,6 +53,7 @@ file.
 |-------------+--------------------------------------------------------|
 | ~SPC a n n~ | Open notifications panel                               |
 | ~SPC a n b~ | Create a bookmark linking to the current file and line |
+| ~SPC a n t~ | Create a todo with title and description               |
 
 * Notification Panel Keybindings
 
